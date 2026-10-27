@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fff5f7">
+<title>Hadiah Kecil Untukmu ♡</title>
+<style>
+:root{--rose:#c86f86;--ink:#563c45;--paper:#fffaf8;--soft:#f9e8ed}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.75;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(#d8a8b2 .7px,transparent .7px);background-size:18px 18px;z-index:-1}
+.hero{min-height:88vh;display:grid;place-items:center;text-align:center;padding:64px 22px;position:relative;overflow:hidden;background:linear-gradient(150deg,#fff8f7,#f8e7eb 58%,#fffaf5)}
+.hero-inner{max-width:720px;position:relative;z-index:2}.eyebrow,.section-label{font:10px Arial,sans-serif;letter-spacing:.25em;text-transform:uppercase;color:var(--rose)}
+h1{font-size:clamp(2.5rem,8vw,5rem);font-weight:normal;line-height:1.12;margin:22px 0;color:#744956}
+.subtitle{font-style:italic;font-size:clamp(1rem,3vw,1.2rem);max-width:560px;margin:auto;color:#85656e}
+.flower{font-size:42px;margin:24px 0 10px;display:inline-block;animation:sway 4s ease-in-out infinite}
+.scroll-note{margin-top:42px;font:10px Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#a17c85}
+.decor{position:absolute;pointer-events:none;opacity:.55;animation:float 8s ease-in-out infinite;user-select:none}.decor.d1{left:7%;top:15%;font-size:30px}.decor.d2{right:8%;top:25%;font-size:24px;animation-delay:-2s}.decor.d3{left:16%;bottom:14%;font-size:23px;animation-delay:-4s}.decor.d4{right:13%;bottom:12%;font-size:32px;animation-delay:-1s}
+section{padding:74px 20px}.wrap{max-width:760px;margin:auto}.section-label{text-align:center;margin-bottom:10px}
+h2{text-align:center;font-weight:normal;font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.2;margin:0 0 26px;color:#744956}
+.intro{text-align:center;max-width:610px;margin:0 auto;font-size:1.07rem}
+.bouquet{background:linear-gradient(180deg,#fffaf8,#fff3f5)}.bouquet-art{font-size:clamp(4rem,16vw,7rem);line-height:1.3;margin:12px 0 18px;filter:drop-shadow(0 8px 12px #d8a5b344);animation:breathe 4s ease-in-out infinite;text-align:center}
+.letter-section{background:#fff}.letter{max-width:650px;margin:auto;padding:clamp(25px,6vw,48px);background:#fffaf7;border:1px solid #f0dfe1;box-shadow:0 18px 55px #875b6810;position:relative;white-space:pre-line}.letter:before{content:"♡";position:absolute;right:20px;top:10px;color:#d8a1ad;font-size:28px}.letter p{margin:0 0 16px}.signature{text-align:right;font-style:italic;color:var(--rose);margin-top:26px!important}
+.memories{background:#fbf0f2}.photo-frame{max-width:520px;margin:28px auto 0;padding:12px;background:#fff;box-shadow:0 12px 38px #79545c17;transform:rotate(-1deg)}.photo-frame img{display:block;width:100%;max-height:580px;object-fit:cover;min-height:150px;background:#f5e5e8}.photo-caption{text-align:center;font-style:italic;margin:18px 0 0}
+.surprise{text-align:center}.surprise-card{max-width:650px;margin:auto;padding:clamp(28px,6vw,52px);border:1px solid #efd9de;background:linear-gradient(145deg,#fff,#fff7f7)}.gift{font-size:48px;margin-bottom:12px}
+button,.button{border:0;border-radius:999px;background:var(--rose);color:white;padding:12px 21px;font:12px Arial,sans-serif;letter-spacing:.04em;cursor:pointer;transition:transform .2s,background .2s;display:inline-block;text-decoration:none}button:hover,.button:hover{transform:translateY(-2px);background:#ad596f}
+#surpriseMessage{display:none;margin:22px auto 0;max-width:520px;animation:fade .8s ease}
+.music-dock{position:fixed;z-index:10;right:14px;bottom:14px;display:flex;align-items:center;gap:8px;background:#fffdf9eF;border:1px solid #efdde1;border-radius:999px;padding:7px 10px;box-shadow:0 5px 22px #6d3b4b18;font:11px Arial,sans-serif;color:#855968}.music-dock button{padding:9px 12px;font-size:11px}
+.qr-section{padding:46px 20px 60px;text-align:center;background:#fff}.qr-box{max-width:440px;margin:auto}.qr-image{width:180px;height:180px;object-fit:contain;display:block;margin:18px auto}.small{font:12px/1.7 Arial,sans-serif;color:#987e84}
+footer{text-align:center;padding:28px 18px 36px;font-size:13px;color:#a17c85}.heart{color:var(--rose)}
+#setup{display:none;background:#fff;border:1px solid #ead7dd;border-radius:16px;padding:20px;margin:20px auto;max-width:760px;font-family:Arial,sans-serif;line-height:1.5}
+#setup h2{text-align:left;font-family:Arial,sans-serif;font-size:21px}#setup label{display:block;font-size:13px;margin:12px 0 5px;color:#694b56}
+#setup input[type=text],#setup textarea{width:100%;border:1px solid #e4cbd2;border-radius:8px;padding:10px;font:14px Arial,sans-serif;background:#fffdfd;color:#543b43}
+#setup textarea{min-height:75px;resize:vertical}.setup-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.setup-note{font-size:12px;color:#8b6b76}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-17px) rotate(8deg)}}
+@keyframes sway{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(5deg)}}@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:540px){.setup-row{grid-template-columns:1fr}.music-dock{right:8px;bottom:8px}.hero{min-height:82vh}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <span class="decor d1">♡</span><span class="decor d2">✿</span><span class="decor d3">♥</span><span class="decor d4">✧</span>
+  <div class="hero-inner">
+    <div class="eyebrow">Sebuah hadiah kecil, dari hati</div>
+    <div class="flower" aria-hidden="true">✿ 🌸 ✿</div>
+    <h1 id="title">Happy Birthday😘<br>My future wife💗</h1>
+    <p class="subtitle" id="subtitle">Semoga setelah ulang tahun ini kita dihadapkan dengan hal-hal yang indah, sayangku. ♡</p>
+    <div class="scroll-note">Dibuat khusus untukmu · ↓</div>
+  </div>
+</header>
+<main>
+<section class="bouquet"><div class="wrap"><div class="section-label">Dengan sepenuh hati</div><h2>Digital Bouquet</h2><div class="bouquet-art" aria-hidden="true">💐</div><p class="intro">Setiap bunga memiliki bagiannya, dan dalam hidupku kamulah bagian terindahnya, sayangku. 🌷</p></div></section>
+<section class="letter-section"><div class="wrap"><div class="section-label">Sebuah pesan untukmu</div><h2 id="letterHeading">A Letter For You ♡</h2><article class="letter"><p id="letterText">For my wife, my queen, my bini 😘
+
+Terima kasih sudah membuat hari-hariku terasa lebih berwarna dan penuh makna. Semoga kamu selalu dikelilingi cinta, kasih sayang, kebahagiaan, dan alasan untuk tersenyum.</p><p class="signature" id="signature">Pangeran Goat, suamikk 😎♡</p></article></div></section>
+<section class="memories"><div class="wrap"><div class="section-label">Potongan cerita kita</div><h2>Kenangan Kita 📷</h2><p class="intro">Setiap momen bersamamu selalu punya tempat istimewa di hatiku.</p><div class="photo-frame"><img id="memoryPhoto" alt="Foto kenangan kita" hidden><div id="photoPlaceholder" style="text-align:center;padding:55px 18px;color:#a17c85;font-style:italic">Sebuah kenangan indah, tersimpan di hati ♡</div></div><p class="photo-caption" id="photoCaption">Peletan jawir horegg ♡</p></div></section>
+<section class="surprise"><div class="wrap"><div class="section-label">Ada sesuatu untukmu</div><h2>Sebuah Kejutan 🎁</h2><div class="surprise-card"><div class="gift" aria-hidden="true">🎁</div><p id="surpriseText">Semoga semua wish kita, baik yang lalu maupun yang belum terpikir, dapat terpenuhi. Semoga pernikahan kita berjalan lancar, kita selalu menjadi pasangan yang harmonis dan saling melengkapi. Kamu jadi istri yang salehah, aku jadi suami yang saleh, dan semoga rezeki kita selalu dilimpahkan dalam segala hal. Aamiin.</p><p>I love you, sayangku, cintaku, cantikku, calon istriku. My world, my universe, my life. 😘💗</p><button id="surpriseButton" type="button">Buka kejutan ♡</button><p id="surpriseMessage">Kalau suatu hari kamu lupa betapa berharganya dirimu, ingat ya: aku akan selalu bersyukur karena semesta mempertemukan kita. Aku sayang kamu. ♡</p></div></div></section>
+<section class="qr-section"><div class="qr-box"><div class="section-label">Simpan momen ini</div><h2>Hadiah ini untukmu ♡</h2><p class="small" id="qrIntro">Bagikan hadiah kecil ini kepada seseorang yang istimewa.</p><img class="qr-image" id="qrImage" alt="QR code untuk membuka website" hidden><p class="small" id="qrStatus">QR code akan muncul otomatis setelah halaman ini dipublikasikan.</p></div></section>
+</main>
+<footer>Dibuat dengan <span class="heart">♡</span> untuk seseorang yang istimewa</footer>
+<div class="music-dock"><span id="musicLabel">Musik untukmu</span><button id="musicButton" type="button">♫ Putar musik</button></div>
+<audio id="music" loop preload="none"></audio>
+
+<!-- Mode personalisasi hanya tampil jika pemilik membuka URL dengan #setup -->
+<section id="setup">
+<h2>Personalisasi hadiah ♡</h2>
+<p class="setup-note">Panel ini tidak terlihat oleh penerima jika tautan dibuka tanpa #setup. Setelah selesai, tekan “Unduh HTML personalisasi” lalu unggah file hasilnya ke GitHub Pages.</p>
+<label for="editTitle">Judul utama</label><input id="editTitle" type="text" value="Happy Birthday😘&#10;My future wife💗">
+<label for="editSubtitle">Kalimat pembuka</label><textarea id="editSubtitle">Semoga setelah ulang tahun ini kita dihadapkan dengan hal-hal yang indah, sayangku. ♡</textarea>
+<label for="editLetter">Isi surat</label><textarea id="editLetter">For my wife, my queen, my bini 😘
+
+Terima kasih sudah membuat hari-hariku terasa lebih berwarna dan penuh makna. Semoga kamu selalu dikelilingi cinta, kasih sayang, kebahagiaan, dan alasan untuk tersenyum.</textarea>
+<label for="editSignature">Tanda tangan</label><input id="editSignature" type="text" value="Pangeran Goat, suamikk 😎♡">
+<label for="editCaption">Caption foto</label><input id="editCaption" type="text" value="Peletan jawir horegg ♡">
+<label for="photoUpload">Pilih foto kenangan</label><input id="photoUpload" type="file" accept="image/*">
+<label for="musicUpload">Pilih musik romantis (MP3/OGG)</label><input id="musicUpload" type="file" accept="audio/*">
+<p class="setup-note">Foto dan musik akan disematkan ke file HTML yang diunduh. Gunakan file musik yang kamu miliki atau berhak gunakan. File HTML bisa menjadi besar jika foto/audio berukuran besar.</p>
+<button id="applyButton" type="button">Terapkan perubahan</button>
+<button id="downloadButton" type="button">Unduh HTML personalisasi</button>
+</section>
+<script>
+const $=id=>document.getElementById(id);
+let photoData='',musicData='';
+function setTitle(text){$('title').innerHTML=escapeHTML(text).replace(/\n/g,'<br>')}
+function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function showPhoto(data){photoData=data||'';$('memoryPhoto').hidden=!data;$('photoPlaceholder').style.display=data?'none':'block';if(data)$('memoryPhoto').src=data}
+function applyEdits(){
+ setTitle($('editTitle').value);$('subtitle').textContent=$('editSubtitle').value;$('letterText').textContent=$('editLetter').value;$('signature').textContent=$('editSignature').value;$('photoCaption').textContent=$('editCaption').value;
+ if(photoData)showPhoto(photoData);if(musicData){$('music').src=musicData;$('musicLabel').textContent='Musik romantis siap diputar'}
+}
+function readFile(file){return new Promise((resolve,reject)=>{const r=new FileReader();r.onload=()=>resolve(r.result);r.onerror=reject;r.readAsDataURL(file)})}
+$('photoUpload').addEventListener('change',async e=>{if(e.target.files[0]){photoData=await readFile(e.target.files[0]);showPhoto(photoData)}});
+$('musicUpload').addEventListener('change',async e=>{if(e.target.files[0]){musicData=await readFile(e.target.files[0]);$('music').src=musicData;$('musicLabel').textContent='Musik romantis siap diputar'}});
+$('applyButton').addEventListener('click',()=>{applyEdits();$('applyButton').textContent='Perubahan diterapkan ✓';setTimeout(()=>$('applyButton').textContent='Terapkan perubahan',1800)});
+$('downloadButton').addEventListener('click',()=>{
+ applyEdits();
+ // Serialize current self-contained media into the downloadable HTML.
+ const clone=document.documentElement.cloneNode(true);
+ clone.querySelector('#setup').style.display='none';
+ clone.querySelector('#setup').remove();
+ clone.querySelector('#title').innerHTML=escapeHTML($('editTitle').value).replace(/\n/g,'<br>');
+ clone.querySelector('#subtitle').textContent=$('editSubtitle').value;
+ clone.querySelector('#letterText').textContent=$('editLetter').value;
+ clone.querySelector('#signature').textContent=$('editSignature').value;
+ clone.querySelector('#photoCaption').textContent=$('editCaption').value;
+ const photo=clone.querySelector('#memoryPhoto'),placeholder=clone.querySelector('#photoPlaceholder');
+ if(photoData){photo.setAttribute('src',photoData);photo.removeAttribute('hidden');placeholder.remove()}
+ const audio=clone.querySelector('#music');if(musicData)audio.setAttribute('src',musicData);
+ // Embed final values in script defaults for future edits; hide setup in downloaded recipient version.
+ const script=clone.querySelector('script');
+ script.textContent = `
+ const $=id=>document.getElementById(id);
+ $('surpriseButton').addEventListener('click',function(){const m=$('surpriseMessage');const open=m.style.display==='block';m.style.display=open?'none':'block';this.textContent=open?'Buka kejutan ♡':'Aku sayang kamu ♡'});
+ $('musicButton').addEventListener('click',async()=>{const audio=$('music');if(!audio.src){alert('Musik belum disematkan.');return}if(audio.paused){try{await audio.play();$('musicButton').textContent='Ⅱ Jeda musik'}catch(e){alert('Tekan tombol musik sekali lagi untuk memutar.')}}else{audio.pause();$('musicButton').textContent='♫ Putar musik'}});
+ (function(){const url=window.location.href.split('#')[0];if(/^https?:/.test(url)&&!/localhost|127\\.0\\.0\\.1/.test(url)){const img=$('qrImage');img.src='https://api.qrserver.com/v1/create-qr-code/?size=220x220&data='+encodeURIComponent(url);img.hidden=false;$('qrStatus').textContent='Pindai QR code ini untuk membuka hadiah digital.'}})();
+ `;
+ const blob=new Blob(['<!DOCTYPE html>\\n'+clone.outerHTML],{type:'text/html;charset=utf-8'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='hadiah-digital-personal.html';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1500);
+});
+$('surpriseButton').addEventListener('click',function(){const m=$('surpriseMessage');const open=m.style.display==='block';m.style.display=open?'none':'block';this.textContent=open?'Buka kejutan ♡':'Aku sayang kamu ♡'});
+$('musicButton').addEventListener('click',async()=>{const audio=$('music');if(!audio.src){alert('Untuk menambahkan musik, buka mode personalisasi dengan menambahkan #setup pada alamat halaman, lalu pilih file musik.');return}if(audio.paused){try{await audio.play();$('musicButton').textContent='Ⅱ Jeda musik'}catch(e){alert('Musik belum bisa diputar. Coba tekan tombol sekali lagi.')}}else{audio.pause();$('musicButton').textContent='♫ Putar musik'}});
+if(location.hash==='#setup')$('setup').style.display='block';
+(function(){const url=location.href.split('#')[0];if(/^https?:/.test(url)&&!/localhost|127\.0\.0\.1/.test(url)){const img=$('qrImage');img.src='https://api.qrserver.com/v1/create-qr-code/?size=220x220&data='+encodeURIComponent(url);img.hidden=false;$('qrStatus').textContent='Pindai QR code ini untuk membuka hadiah digital.'}})();
+</script>
+</body></html>
